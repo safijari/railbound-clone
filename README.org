@@ -1,0 +1,20 @@
+* Goals
+  - Build prototype for a free play railbound style train game
+* Idea
+** class Tile
+   Each tile will have 4 directions, NEWS. The Tile will also have a mapping that defines how the train will exit if it enters from a given entrance. E.g.
+   
+   ------
+   ------
+   
+   Basic horizontal tile has the mapping E --> W, W --> E. When a direction does not exist as a key for this mapping, entry from that direction is not possible.
+   
+   More complex tiles can have weird mappings, e.g. 
+   
+   ----------
+   ----\ \---
+        \ \
+	
+   Will have mapping E -> S (because of the connection), W -> E (because it bypasses the connection), and S -> E
+   
+   With these rules it should be possible to simulate the movement of one or more agents atop these tiles.
